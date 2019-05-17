@@ -1,4 +1,9 @@
 fixtures:
+  forge_modules:
+    yumrepo_core:
+      repo: "puppetlabs/yumrepo_core"
+      ref: "1.0.1"
+      puppet_version: ">= 6.0.0"
   repositories:
     app_modeling: "https://github.com/puppetlabs/puppetlabs-app_modeling.git"
     mysql: "https://github.com/puppetlabs/puppetlabs-mysql.git"

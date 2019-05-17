@@ -44,7 +44,7 @@ define rgbank::web (
     if $::selinux == true {
       if (! defined(Selinux::Port["allow-httpd-${listen_port}"])) {
         selinux::port { "allow-httpd-${listen_port}":
-          context  => 'http_port_t',
+          seltype  => 'http_port_t',
           port     => $listen_port,
           protocol => 'tcp',
           before   => [Rgbank::Web::Base[$name]],
